@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiceOver Instagram</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/profile.css">
+    <link rel="icon" href="images/instagram-logo.svg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <div class="logo"><img src="images/instagram-logo.svg" aria-hidden="true" ><h1>Instagram</h1></div>
+            
+            <a href="index.html"><img src="images/home.svg" alt="" aria-hidden="true">Home</a>
+            <a href="#"><img src="images/search.svg" alt="" aria-hidden="true">Search</a>
+            <a href="#"><img src="images/explore.svg" alt="" aria-hidden="true">Explore</a>
+            <a href="#"><img src="images/reels.svg" alt="" aria-hidden="true">Reels</a>
+            <a href="#"><img src="images/messages.svg" alt="" aria-hidden="true">Messages</a>
+            <a href="profile.html" class="active" aria-current="page"><img src="images/profielfoto-aniek.jpg" alt="" aria-hidden="true" class="avatar">Profile</a>
+        </nav>
+    </header>
+    
+    <main class="profile">
+        <div class="profile-header">
+            <img  src="images/profielfoto-aniek.jpg" alt=" profile aniek.jansen" class="avatar">
+            <div class="profile-info">
+                <ul class="top-row">
+                <li class="username" aria-label="Gebruikersnaam">aniekjansen</li>
+                <li><button class="btn-microphone" id="playButton" aria-label="Profile audio"><img src="images/microphone.svg"></button>
+                <audio id="myAudio"><source src="images/introductie-aniek.mp3" type="audio/mpeg"></audio></li>
+                </ul>
+
+                <ul class="followers">
+                <li>2 posts</li>
+                <li>489 followers</li>
+                <li>456 following</li>
+                </ul>
+
+                <ul class="bio">
+                <li aria-label="Naam">Aniek Jansen</li>
+                <li>Psychologie </li>
+                </ul>
+            </div>
+        </div>
+
+        <ul class="tabs">
+            <li class="tab active">POSTS</li>
+            <li class="tab">REELS</li>
+            <li class="tab">TAGGED</li>
+        </ul>
+
+        <ul class="layout-posts">
+            <li><img src="images/lowlands-aniek.jpg" alt="Samen met Ruby zit ik op een bankje bij de main stage van het lowlands festival met een biertje in mijn hand."></li>
+        </ul>
+    </main>
+
+    <script>
+        const playButton = document.getElementById('playButton');
+        const myAudio = document.getElementById('myAudio');
+
+        playButton.addEventListener('click', () => {
+        if (myAudio.paused) {
+            myAudio.play();
+        } else {
+            myAudio.pause();
+        }
+        });
+    </script>
+</body>
+</html>

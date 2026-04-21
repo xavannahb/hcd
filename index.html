@@ -4,64 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VoiceOver Instagram</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/home.css">
+        <link rel="icon" href="images/instagram-logo.svg" type="image/x-icon">
 </head>
+
 <body>
     <header>
-        <nav class="menu">
-            <h1 class="logo">Instagram</h1>
-            <a href="index.html" class="active">Home</a>
-            <a href="#">Search</a>
-            <a href="#">Explore</a>
-            <a href="#">Reels</a>
-            <a href="#">Messages</a>
-            <a href="profile.html">Profile</a>
+        <nav aria-label="Main navigation">
+            <div class="logo"><img src="images/instagram-logo.svg" alt="Instagram logo"><h1>Instagram</h1></div>
+            
+            <a href="index.html" class="active" aria-current="page"><img src="images/home.svg" alt="" aria-hidden="true">Home</a>
+            <a href="#"><img src="images/search.svg" alt="" aria-hidden="true">Search</a>
+            <a href="#"><img src="images/explore.svg" alt="" aria-hidden="true">Explore</a>
+            <a href="#"><img src="images/reels.svg" alt="" aria-hidden="true">Reels</a>
+            <a href="#"><img src="images/messages.svg" alt="" aria-hidden="true">Messages</a>
+            <a href="profile-aniek.html"><img src="images/profielfoto-aniek.jpg" alt="" aria-hidden="true" class="avatar">Profile</a>
         </nav>
-  </header>
+    </header>
 
-  <main class="app">
-    <section class="feed">
+    <main>
+        <section class="feed">
+            <article class="post">
+                <div class="post-header">
+                    <div class="user">
+                        <img  src="images/profielfoto-aniek.jpg" alt=" profile aniek.jansen" class="avatar">
+                        <div><p class="post-username">aniek.jansen</p>
+                        <p class="post-location">Amsterdam</p></div>
+                    </div>
+                    <button class="btn-microphone" id="playButton" aria-label="Audio afspelen"><img src="images/microphone.svg"></button>
+                    <audio id="myAudio"><source src="images/lowlands-foto-aniek.mp3" type="audio/mpeg"></audio>
+                </div>
 
-    <article class="post">
-        <div class="post-header">
-          <div class="user">
-            <img class="avatar" src="images/profile-sport-fluencer.jpeg" alt=" profile sport.fluencer">
-            <div>
-              <p class="post-username">sport.fluencer</p>
-              <p class="post-location">Amsterdam</p>
-            </div>
-          </div>
-          <a href="#" aria-label="categorie" class="post-category">Sport</a>
-        </div>
-        <img class="post-image" src="images/tennis-racket.jpeg" alt="Two tennis rackets on red court placed with a green hangbag and a stanley cup.">
+                <img class="post-image" src="images/lowlands-aniek.jpg" alt="Samen met Ruby zit ik op een bankje bij de main stage van het lowlands festival.">
+  
 
-        <div class="post-info">
-          <p class="post-likes">1,284 likes</p>
-          <div class="post-caption"><p class="post-username">sport.fluencer</p> <p>A clean and minimal web interface concept.</p></div>
-          <p class="post-comments">View all 42 comments</p>
-          <p class="post-time">2 hours ago</p>
-        </div>
-    </article>
+                <div class="post-info">
+                    <p class="post-likes" aria-label="1284 likes">284 likes</p> <!-- aria label zorgt ervoor dat de screenreader het aantal likes uitleest -->
+                    <div class="post-caption"><p class="post-username">aniek.jansen</p> <p>Met ruby op het lowlands festival!</p></div>
+                    <p class="post-comments">View all 3 comments</p>
+                    <p class="post-time">2 hours ago</p>
+                </div>
+            </article>
 
-    <article class="post">
-        <div class="post-header">
-          <div class="user">
-            <img class="avatar" src="images/sport-fluencer.jpg" alt="sport.fluencer">
-            <div><p class="post-username">sport.fluencer</p><p class="post-location">Amsterdam</p></div>
-          </div>
-          <div>•••</div>
-        </div>
-        <img class="post-image" src="images/tennis-racket.jpeg" alt="Two tennis rackets on red court placed with a green hangbag and a stanley cup.">
+            <article class="post">
+                <div class="post-header">
+                    <div class="user">
+                        <img  src="images/profielfoto-louise.jpg" alt=" profile louise5522" class="avatar">
+                        <div><p class="post-username">louise5522</p>
+                        <p class="post-location">Rhodos</p></div>
+                    </div>
+                    <button class="btn-microphone" id="playButton" aria-label="Audio afspelen"><img src="images/microphone.svg"></button>
+                    <audio id="myAudio"><source src="images/lowlands-foto-aniek.mp3" type="audio/mpeg"></audio>
+                </div>
 
-        <div class="post-info">
-          <p class="post-likes">1,284 likes</p>
-          <div class="post-caption"><p class="post-username">sport.fluencer</p> <p>A clean and minimal web interface concept.</p></div>
-          <p class="post-comments">View all 42 comments</p>
-          <p class="post-time">2 hours ago</p>
-        </div>
-    </article>
-    </section>
+                <img class="post-image" src="images/rhodos-louise.jpg" alt="Samen met Ruby zit ik op een bankje bij de main stage van het lowlands festival.">
+  
 
-  </main>
+                <div class="post-info">
+                    <p class="post-likes" aria-label="1284 likes">1,284 likes</p> <!-- aria label zorgt ervoor dat de screenreader het aantal likes uitleest -->
+                    <div class="post-caption"><p class="post-username">louise5522</p> <p>A clean and minimal web interface concept.</p></div>
+                    <p class="post-comments">View all 42 comments</p>
+                    <p class="post-time">8 hours ago</p>
+                </div>
+            </article>
+        </section>
+    </main>
+        <script>
+        const playButton = document.getElementById('playButton');
+        const myAudio = document.getElementById('myAudio');
+
+        playButton.addEventListener('click', () => {
+        if (myAudio.paused) {
+            myAudio.play();
+        } else {
+            myAudio.pause();
+        }
+        });
+    </script>
 </body>
 </html>
