@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiceOver Instagram</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/listen.css">
+    <link rel="icon" href="images/instagram-logo.svg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="topbar">
+            <div class="logo">
+                <img src="icons/instagram-logo.svg" alt="Instagram logo">
+                <h1>Instagram</h1>
+            </div>
+
+            <button class="menu-button" aria-label="Menu openen">
+                <img src="icons/menu-dropdown.svg" alt="">
+            </button>
+        </div>
+
+        <nav aria-label="Hoofdnavigatie">
+            <a href="index.html" class="active" aria-current="page"><img src="icons/home.svg" alt="" aria-hidden="true">Home</a>
+            <a href="listen.html"><img src="icons/microphone.svg" alt="" aria-hidden="true">Listen</a>
+            <a href="#"><img src="icons/search.svg" alt="" aria-hidden="true">Search</a>
+            <a href="#"><img src="icons/explore.svg" alt="" aria-hidden="true">Explore</a>
+            <a href="#"><img src="icons/reels.svg" alt="" aria-hidden="true">Reels</a>
+            <a href="#"><img src="icons/messages.svg" alt="" aria-hidden="true">Messages</a>
+            <a href="#"><img src="images/profielfoto-aniek.jpg" alt="" aria-hidden="true" class="avatar">Profile
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="feed" aria-label="Posts">
+
+            <div class="nav-btns">
+                <button id="prev" onclick="go(-1)" disabled>↑ Vorige</button>
+                <button id="next" onclick="go(1)">Volgende ↓</button>
+            </div>
+
+            <article class="post active" id="post-0" aria-label="Post van aniek.jansen vanuit Amsterdam">
+                <div class="post-header">
+                    <a href="profile-aniek.html">
+                        <div class="user">
+                            <img src="images/profielfoto-aniek.jpg" alt="Profielfoto van aniek.jansen" class="avatar">
+                            <div>
+                                <p class="post-username">aniek.jansen</p>
+                                <p class="post-location">Amsterdam</p>
+                            </div>
+                        </div>
+                    </a>
+                    <audio id="audio-0" src="audio/lowlands-foto-aniek.mp3" autoplay aria-label="Audiobeschrijving van de post van aniek.jansen"></audio>
+                </div>
+
+                <img class="post-image" src="images/lowlands-aniek.jpg" alt="Samen met Ruby zit ik op een bankje bij de main stage van het Lowlands festival.">
+
+                <div class="post-info">
+                    <p class="post-likes" aria-label="284 likes">284 likes</p>
+                    <div class="post-caption">
+                        <p class="post-username">aniek.jansen</p>
+                        <p>Met ruby op het lowlands festival!</p>
+                    </div>
+                    <p class="post-comments">View all 3 comments</p>
+                    <p class="post-time">2 hours ago</p>
+                </div>
+            </article>
+
+            <article class="post" id="post-1" aria-label="Post van louise5522 vanuit Rhodos">
+                <div class="post-header">
+                    <a href="profile-louise.html">
+                        <div class="user">
+                            <img src="images/profielfoto-louise.jpg" alt="Profielfoto van louise5522" class="avatar">
+                            <div>
+                                <p class="post-username">louise5522</p>
+                                <p class="post-location">Rhodos</p>
+                            </div>
+                        </div>
+                    </a>
+                    <audio id="audio-1" src="audio/introductie-aniek.mp3" aria-label="Audiobeschrijving van de post van louise5522"></audio>
+                </div>
+
+                <img class="post-image" src="images/vriendinnen-louise.jpg" alt="Met een vriendnnetje aan het lopen over een schattige straat op vakantie in Phodos Griekenland">
+
+                <div class="post-info">
+                    <p class="post-likes" aria-label="1284 likes">1,284 likes</p>
+                    <div class="post-caption">
+                        <p class="post-username">louise5522</p>
+                        <p>Op vakantie naar Rhodos!</p>
+                    </div>
+                    <p class="post-comments">View all 42 comments</p>
+                    <p class="post-time">8 hours ago</p>
+                </div>
+            </article>
+
+            <div class="nav-btns">
+                <button id="prev2" onclick="go(-1)">↑ Vorige</button>
+                <button id="next2" onclick="go(1)">Volgende ↓</button>
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+        // Header responsive
+        const menuButton = document.querySelector(".menu-button");
+        const nav = document.querySelector("header nav");
+
+        menuButton.onclick = toggleMenu;
+
+        function toggleMenu() {
+            nav.classList.toggle("open");
+        }
+        
+        // Onthoudt welke post je nu ziet, beginnen bij 0 (de eerste post)
+        let cur = 0;
+
+        // Verzamelt alle elementen met de class "post" in een lijst
+        const posts = document.querySelectorAll(".post");
+
+        // Functie die wordt aangeroepen als je op "Vorige" (dir = -1) of "Volgende" (dir = 1) klikt
+        function go(dir) {
+
+            // Verwijder "active" van de huidige post, zodat hij verdwijnt (display: none via CSS)
+            posts[cur].classList.remove("active");
+
+            // Verhoog of verlaag cur met 1, zodat we naar de volgende of vorige post gaan
+            cur += dir;
+
+            // Voeg "active" toe aan de nieuwe post, zodat hij zichtbaar wordt (display: block via CSS)
+            posts[cur].classList.add("active");
+
+            // Speel de audio af die bij de nieuwe post hoort, via het id "audio-0" of "audio-1"
+            document.getElementById("audio-" + cur).play();
+
+            // Kijk of we op de eerste post zijn
+            const atStart = cur === 0;
+
+            // Kijk of we op de laatste post zijn (posts.length is 2, dus laatste index is 1)
+            const atEnd = cur === posts.length - 1;
+
+            // Zet de "Vorige" knoppen uit als we op de eerste post zijn
+            document.getElementById("prev").disabled = atStart;
+            document.getElementById("prev2").disabled = atStart;
+
+            // Zet de "Volgende" knoppen uit als we op de laatste post zijn
+            document.getElementById("next").disabled = atEnd;
+            document.getElementById("next2").disabled = atEnd;
+        }
+        // === BRON: Claude prompt: 'Kan je de buttons werkend maken?' ===
+    </script>
+</body>
+</html>

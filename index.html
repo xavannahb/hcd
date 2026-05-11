@@ -5,48 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VoiceOver Instagram</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/home.css">
-        <link rel="icon" href="images/instagram-logo.svg" type="image/x-icon">
+    <link rel="icon" href="images/instagram-logo.svg" type="image/x-icon">
 </head>
 
 <body>
     <header>
-        <nav aria-label="Main navigation">
-            <div class="logo"><img src="images/instagram-logo.svg" alt="Instagram logo"><h1>Instagram</h1></div>
-            
-            <a href="index.html" class="active" aria-current="page"><img src="images/home.svg" alt="" aria-hidden="true">Home</a>
-            <a href="#"><img src="images/search.svg" alt="" aria-hidden="true">Search</a>
-            <a href="#"><img src="images/explore.svg" alt="" aria-hidden="true">Explore</a>
-            <a href="#"><img src="images/reels.svg" alt="" aria-hidden="true">Reels</a>
-            <a href="#"><img src="images/messages.svg" alt="" aria-hidden="true">Messages</a>
-            <a href="profile-aniek.html"><img src="images/profielfoto-aniek.jpg" alt="" aria-hidden="true" class="avatar">Profile</a>
+        <div class="topbar">
+            <div class="logo">
+                <img src="icons/instagram-logo.svg" alt="Instagram logo">
+                <h1>Instagram</h1>
+            </div>
+
+            <button class="menu-button" aria-label="Menu openen">
+                <img src="icons/menu-dropdown.svg" alt="">
+            </button>
+        </div>
+
+        <nav aria-label="Hoofdnavigatie">
+            <a href="index.html" class="active" aria-current="page"><img src="icons/home.svg" alt="" aria-hidden="true">Home</a>
+            <a href="listen.html"><img src="icons/microphone.svg" alt="" aria-hidden="true">Listen</a>
+            <a href="#"><img src="icons/search.svg" alt="" aria-hidden="true">Search</a>
+            <a href="#"><img src="icons/explore.svg" alt="" aria-hidden="true">Explore</a>
+            <a href="#"><img src="icons/reels.svg" alt="" aria-hidden="true">Reels</a>
+            <a href="#"><img src="icons/messages.svg" alt="" aria-hidden="true">Messages</a>
+            <a href="#"><img src="images/profielfoto-aniek.jpg" alt="" aria-hidden="true" class="avatar">Profile
+            </a>
         </nav>
     </header>
-
     <main>
-        <section class="feed">
-            <article class="post">
+        <section class="feed" aria-label="Posts">
+
+            <article class="post active">
+
                 <div class="post-header">
                     <a href="profile-aniek.html">
                         <div class="user">
-                            <img  src="images/profielfoto-aniek.jpg" alt=" profile aniek.jansen" class="avatar">
+                            <img src="images/profielfoto-aniek.jpg" alt=" profile aniek.jansen" class="avatar">
                             <div><p class="post-username">aniek.jansen</p>
                             <p class="post-location">Amsterdam</p></div>
                         </div>
                     </a>
-                    <button class="btn-microphone" id="playButton" aria-label="Audio afspelen"><img src="images/microphone.svg"></button>
-                    <audio id="myAudio"><source src="images/lowlands-foto-aniek.mp3" type="audio/mpeg"></audio>
+                    <button class="btn-microphone" id="playButton" aria-label="Audio afspelen"><img src="icons/microphone.svg"></button>
+                    <audio id="myAudio"><source src="audio/lowlands-foto-aniek.mp3" type="audio/mpeg"></audio>
                 </div>
 
                 <img class="post-image" src="images/lowlands-aniek.jpg" alt="Samen met Ruby zit ik op een bankje bij de main stage van het lowlands festival.">
-  
 
                 <div class="post-info">
                     <p class="post-likes" aria-label="1284 likes">284 likes</p> <!-- aria label zorgt ervoor dat de screenreader het aantal likes uitleest -->
-                    <div class="post-caption"><p class="post-username">aniek.jansen</p> <p>Met ruby op het lowlands festival!</p></div>
+                    <p class="post-caption"><strong>aniek.jansen</strong>Met ruby op het lowlands festival!</p>
                     <p class="post-comments">View all 3 comments</p>
                     <p class="post-time">2 hours ago</p>
                 </div>
+
             </article>
 
             <article class="post">
@@ -58,16 +69,16 @@
                             <p class="post-location">Rhodos</p></div>
                         </div>
                     </a>
-                    <button class="btn-microphone" id="playButton" aria-label="Audio afspelen"><img src="images/microphone.svg"></button>
+                    <button class="btn-microphone" id="playButton" aria-label="Audio afspelen"><img src="icons/microphone.svg"></button>
                     <audio id="myAudio"><source src="images/lowlands-foto-aniek.mp3" type="audio/mpeg"></audio>
                 </div>
 
-                <img class="post-image" src="images/rhodos-louise.jpg" alt="Samen met Ruby zit ik op een bankje bij de main stage van het lowlands festival.">
+                <img class="post-image" src="images/vriendinnen-louise.jpg" alt="Met een vriendnnetje aan het lopen over een schattige straat op vakantie in Phodos Griekenland">
   
 
                 <div class="post-info">
                     <p class="post-likes" aria-label="1284 likes">1,284 likes</p> <!-- aria label zorgt ervoor dat de screenreader het aantal likes uitleest -->
-                    <div class="post-caption"><p class="post-username">louise5522</p> <p>Op vakantie naar Rhodos!</p></div>
+                    <p class="post-caption"><strong>louise5522</strong>Op vakantie naar Rhodos!</p>
                     <p class="post-comments">View all 42 comments</p>
                     <p class="post-time">8 hours ago</p>
                 </div>
@@ -75,16 +86,15 @@
         </section>
     </main>
         <script>
-        const playButton = document.getElementById('playButton');
-        const myAudio = document.getElementById('myAudio');
+            // Header responsive
+            const menuButton = document.querySelector(".menu-button");
+            const nav = document.querySelector("header nav");
 
-        playButton.addEventListener('click', () => {
-        if (myAudio.paused) {
-            myAudio.play();
-        } else {
-            myAudio.pause();
-        }
-        });
-    </script>
+            menuButton.onclick = toggleMenu;
+
+            function toggleMenu() {
+                nav.classList.toggle("open");
+            }
+        </script>
 </body>
 </html>
