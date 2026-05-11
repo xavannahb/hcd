@@ -78,3 +78,9 @@ Ik heb mijn prototype getest met Aniek. Ik had haar ook gevraagd om een spraakme
 Het eindproduct is een toegankelijke variant van Instagram, speciaal ontworpen voor Ihab. Bij elke post kan een gebruiker een spraakmemo opnemen om de foto te beschrijven. Zo hoort Ihab niet alleen wát er op de foto staat, maar ook hoe iemand zich voelde op dat moment.
 
 De applicatie heeft twee pagina's. De homepagina is de normale feedpagina, maar dan met een microfoonknop bij elke post waarmee de audio wordt afgespeeld. De listen-pagina is een reels-achtige ervaring waarbij de focus volledig op het luisteren ligt. Beide pagina's zijn volledig toegankelijk met aria-labels en werken goed met een screenreader.
+
+## Bronnen
+
+* Claude - prompt: 'Kan je de buttons werkend maken?'
+* Instagram - Inspiratie voor styling
+* Afbeeldingen zelf gemaakt 
