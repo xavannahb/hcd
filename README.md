@@ -1,13 +1,10 @@
-# hcd
+# Human Centerd Design
+
 ## Week 1
 
 ### Wat heb ik gedaan? 
 
-VUL AAN - maak hier een samenhangend verhaal van
-- Begonnen met het uitwerken van mijn ontwerp (screenreader library) 
-- basic informatie erover zoeken, wat is er allemaal mogelijk met de screenreader 
-- hoe kan ik daar een eenvoudige website van maken
-- Na de test toch tot de conclusie gekomen dat dit niet echt iets is waar vraag naar was. 
+Ik ben begonnen met het uitwerken van mijn eerste ontwerp. Ik ging wilde een screenreader library gaan maken. Ik heb hiervoor basisinformatie opgezocht over hoe screenreaders werken, wat er allemaal mee mogelijk is en hoe ik daar een eenvoudige website van kon maken. Na de eerste test met Ihab ben ik toch tot de conclusie gekomen dat dit niet echt iets was waar vraag naar was, en heb ik mijn idee omgegooid.
 
 ### Test 1 Ihab
 
@@ -31,18 +28,13 @@ Op social media vindt hij het vooral jammer dat het zo onpersoonlijk is als hij 
 
 ### Voortgang 
 
-VUL AAN 
-Ik heb mijn idee voor gelegd over mijn instagram pagina met audio tijdens dit voortgangs gesprek. Ik had hier niet heel veel te laten zien omdat ik dus was veranderd van idee. Vasilus vond het een leuk idee om uit te werken aangezien het wel leuk is voor mensen die afbeeldingen niet kunnen zien, ook gebruik kunnen maken van social media op een andere manier. 
+Ik heb mijn nieuwe idee voorgelegd tijdens het voortgangsgesprek. Een Instagram-pagina met audio bij afbeeldingen. Ik had hier niet heel veel te laten zien, omdat ik van idee was veranderd. Vasilis vond het een leuk idee om uit te werken, omdat het voor mensen die afbeeldingen niet kunnen zien toch mogelijk maakt om op een andere manier gebruik te maken van social media.
 
 ## Week 2 
 
 ### Wat heb ik gedaan? 
 
-VUL AAN - maak hier een samenhangend verhaal van
-- Begonnen met het uitwerken van mijn ontwerp (instagram met audio ipv alleen beeld)
-- Audio voor afbeeldingen verzamelen
-- Opzet van gemaakt van hoe het eruit moet komen te zien
-- Instagram zelf een beetje proberen na te bootsen
+In week 2 ben ik begonnen met het uitwerken van mijn nieuwe ontwerp: een Instagram-pagina waarbij je bij afbeeldingen ook audio kunt beluisteren in plaats van alleen beeld. Ik heb audio voor afbeeldingen verzameld en een eerste opzet gemaakt van hoe het eruit moest komen te zien. Daarna ben ik begonnen met het nabouwen van de Instagram-interface.
 
 ### Test 2 Ihab
 
@@ -54,39 +46,35 @@ Het is een leuk idee maar Ihab vroeg zich wel af of gebruikers deze functie echt
 
 ### Voortgang 
 
-VUL AAN - en maak hier een samenhangend verhaal van
-Tijdens dit voortgangsgesprek heb ik mijn eerste ontwerp laten zien aan. Ze vonden het leuk dat je audio hebt bij de afbeeldingen. Daarnaast geeft het ook aan normale gebruikers ook wat meer gevoel van de persoon zelf doordat de stem van iemand hoort. Je hoort echt of iemand ergens enthousiast over is en of ze het leuk hebben gehad. 
-Verder moest ik nog wel wat dingen uitwerken. Misschien leuk om een profiel aan te maken waar je een audio bij hoort. 
+Tijdens het voortgangsgesprek heb ik mijn eerste ontwerp laten zien. Ze vonden het leuk dat je audio hebt bij de afbeeldingen. Daarnaast geeft het ook voor gewone gebruikers wat meer gevoel van de persoon zelf, omdat je de stem hoort. Je hoort echt of iemand ergens enthousiast over is en of ze het leuk hebben gehad. Verder moest ik nog wat dingen uitwerken. Ze suggereerden ook om een profiel aan te maken waarbij je bij een introductie audio kunt horen.
 
 ## Week 3
 
 ### Wat heb ik gedaan? 
 
-VUL AAN - en maak hier een samenhangend verhaal van
-- Profielen aanmaken waar een introductie aan toe word gevoegd met audio
-- Samenhang maken van alles
-- Menu structuur goed krijgen
+In week 3 heb ik profielen aangemaakt waarbij een audio-introductie is toegevoegd. Ik heb gewerkt aan de samenhang van het geheel en de menustructuur beter opgezet, zodat alles logisch door elkaar loopt.
 
 ### Test 3 Ihab
 
-VUL AAN - en maak hier een samenhangend verhaal van
-Ik heb vandaag mijn prototype weer getest met Ihab. Hij ging overal makkelijk door heen en er was eigenlijk niet zo veel om op te merken. Hij vondt het een leuk idee en had verder niet heel veel op te merken. Misschien leuker om wat meer afbeeldingen etc te laten zien 
+Ik heb mijn prototype deze week opnieuw getest met Ihab. Hij ging er makkelijk doorheen en er was eigenlijk niet veel op te merken. Hij vond het een leuk idee en had verder niet heel veel kritiek. Wel gaf hij aan dat het misschien leuker zou zijn om wat meer afbeeldingen en content te zien.
+Zelf merkte ik op dat het prototype op dit punt redelijk basis was en dat er wat meer inhoud nodig is het goed te kunnen testen met andere gebruikers.
 
 ### Voortgang 
 
-VUL AAN - wat nodig is
-Tijdens het voortgangsgesprek kwamen we tot de conclusie dat we het misschien wel nog makkelijker kunnen maken door misschien meteen een audio te laten afspelen. Daarnaast is het misschien nuttig om een Vorige en Verder knoppen te maken dat je toch naar de volgende kunt gaan als je niet meer wil luisteren. Ook moet het ontwerp minimaal 4 of 5 fotos hebben om goed te testen met andere gebruikers. Het moet een soort reels achtig worden maar dan voor instagram posts.
+Tijdens het voortgangsgesprek kwamen we tot de conclusie dat we het misschien nog makkelijker kunnen maken door audio meteen automatisch af te laten spelen. Daarnaast is het misschien nuttig om een "Vorige" en "Verder" knop toe te voegen, zodat je naar de volgende post kunt gaan als je niet meer wil luisteren. Ook moest het ontwerp minimaal 4 of 5 foto's hebben om goed te kunnen testen met andere gebruikers. Het moest een soort reels-achtige ervaring worden, maar dan voor Instagram-posts.
 
 ## Week 4 
 
 ### Wat heb ik gedaan? 
 
-VUL AAN - en maak hier een samenhangend verhaal van
-- 2 paginas gemaakt, 1 om de afbeeldingen te beluisteren en 1 om gewoon normaal de fotos te kunenn bekijken
-- Veel variaties gemaakt met hoe het uiteindelijk het beste zou gaan werken
+In week 4 heb ik twee pagina's gemaakt: één om de afbeeldingen te beluisteren en één om de foto's gewoon normaal te kunnen bekijken. Ik heb ook veel variaties gemaakt om te kijken hoe het uiteindelijk het beste zou werken. In de code heb ik gewerkt aan een duidelijke navigatiestructuur met een responsive menu, toegankelijke knoppen met aria-labels en audio per post die apart aangestuurd kan worden via een microfoonknop.
 
 ### Test met Aniek
 
-VUL AAN - en maak hier een samenhangend verhaal van
-Ik heb vandaag mijn prototype weer getest met Aniek. Ik heb haar gevraagd om ook een spraakmemo op te nemen over haar foto dus ik vond het wel zo leuk om met haar te testen. Ik legde het ontwerp uit. en ze ging er spoedig door heen. We merkten wel op dat de audio door elkaar heen ging spelen wat verwarend was. en ook dat het misschien handig is om met sneltoetsen op je laptop hier iets mee te doen misschien? 
+Ik heb mijn prototype getest met Aniek. Ik had haar ook gevraagd om een spraakmemo op te nemen bij haar foto, dus ik vond het extra leuk om met haar te testen. Ik legde het ontwerp uit en ze ging er snel doorheen. We merkten wel op dat de audio door elkaar heen ging spelen, wat verwarrend was. Daarnaast vroegen we ons af of het handig zou zijn om met sneltoetsen op je laptop de audio te bedienen, zodat je niet steeds hoeft te klikken.
 
+## Eindproduct
+
+Het eindproduct is een toegankelijke variant van Instagram, speciaal ontworpen voor Ihab. Bij elke post kan een gebruiker een spraakmemo opnemen om de foto te beschrijven. Zo hoort Ihab niet alleen wát er op de foto staat, maar ook hoe iemand zich voelde op dat moment.
+
+De applicatie heeft twee pagina's. De homepagina is de normale feedpagina, maar dan met een microfoonknop bij elke post waarmee de audio wordt afgespeeld. De listen-pagina is een reels-achtige ervaring waarbij de focus volledig op het luisteren ligt. Beide pagina's zijn volledig toegankelijk met aria-labels en werken goed met een screenreader.
